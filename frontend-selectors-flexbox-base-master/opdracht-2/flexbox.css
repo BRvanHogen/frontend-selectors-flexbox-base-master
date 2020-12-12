@@ -1,0 +1,71 @@
+/* ======================================================
+   OEFENEN MET FLEXBOX
+========================================================= */
+
+/*Opdracht 2.1: het verplaatsen van de witte tekst in het paarse blok naar onderaan
+in het paarse blok
+ */
+
+
+.one {
+    display: flex;
+    flex-wrap: wrap;
+    align-content: flex-end; /*hiermee kreeg ik uiteindelijk Olivia 35 jr op de plek waar ik wilde, hoe dan?*/
+}
+
+/* ## Opdracht 2.2:
+Zorg dat de `<div class="two">` er zo uit komt te zien door flexbox te gebruiken: */
+
+.two {
+    display: flex;
+    align-content: flex-end;
+
+}
+/*Edhub stond in een aparte div, ik zag dus geen andere kans dan een ID aan te maken. Jij? */
+#Edhub {
+    display: flex;
+    flex-direction: row-reverse;
+    width: 900px;
+}
+
+/* ## Opdracht 2.3:
+               Zorg dat de `<div class="three">` er zo uit komt te zien door flexbox te gebruiken: */
+
+.three {
+    display:flex;
+    align-items: baseline;
+}
+
+.three ul {
+    display: flex;
+    justify-content: space-evenly;
+    width: 500px;
+    list-style-type: none;
+}
+
+.three div {
+    display: flex;
+    list-style-type: none;
+    width: 400px;
+    justify-content: flex-end;
+}
+
+/*## Opdracht 2.4:
+Zorg dat het login-blok er zo uit komt te zien door flexbox te gebruiken: */
+
+/*
+.four .item {
+    align-self: center;
+}
+*/
+
+/* eerst gebruikte ik label. Duurde even voor ik erachter kwam, dat ik form moest hebben */
+form {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+
+
+
+}
