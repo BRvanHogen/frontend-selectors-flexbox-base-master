@@ -10,7 +10,8 @@ in het paarse blok
 .one {
     display: flex;
     flex-wrap: wrap;
-    align-content: flex-end; /*hiermee kreeg ik uiteindelijk Olivia 35 jr op de plek waar ik wilde, hoe dan?*/
+    align-content: flex-end; /*hiermee kreeg ik uiteindelijk Olivia 35 jr op de
+    plek waar ik wilde, hoe dan?*/
 }
 
 /* ## Opdracht 2.2:
@@ -21,11 +22,11 @@ Zorg dat de `<div class="two">` er zo uit komt te zien door flexbox te gebruiken
     align-content: flex-end;
 
 }
-/*Edhub stond in een aparte div, ik zag dus geen andere kans dan een ID aan te maken. Jij? */
+/*Edhub stond in een aparte div, ik zag dus geen andere optie dan een ID aan te maken. Jij? */
 #Edhub {
     display: flex;
     flex-direction: row-reverse;
-    width: 900px;
+    flex-basis: 900px;
 }
 
 /* ## Opdracht 2.3:
@@ -34,38 +35,65 @@ Zorg dat de `<div class="two">` er zo uit komt te zien door flexbox te gebruiken
 .three {
     display:flex;
     align-items: baseline;
+
+
 }
 
 .three ul {
-    display: flex;
+    display: flex;   /*Nova zei alleen flex op container usually. nog even naar kijken */
     justify-content: space-evenly;
-    width: 500px;
+    flex-basis: 450px;
     list-style-type: none;
 }
 
 .three div {
     display: flex;
-    list-style-type: none;
-    width: 400px;
+    flex-basis: 660px;
     justify-content: flex-end;
 }
 
 /*## Opdracht 2.4:
 Zorg dat het login-blok er zo uit komt te zien door flexbox te gebruiken: */
 
-/*
-.four .item {
-    align-self: center;
-}
-*/
-
 /* eerst gebruikte ik label. Duurde even voor ik erachter kwam, dat ik form moest hebben */
+
+.four {
+    display: flex;
+    justify-content: center;
+}
+
 form {
     display: flex;
     flex-direction: column;
     justify-content: center;
     align-items: center;
+}
+
+/*## Opdracht 2.5:
+Zorg dat de layout van de gele blokken er zo uit komt te zien door flexbox te gebruiken.
+Elk blok heeft een minimale breedte van 1/3 van het originele scherm van 1200px.
+ **Let op:** er zit ook nog padding op.
+
+![Opdracht 2.5](./assets/five-big.png "Eindresultaat")
+*/
+.five {
+    display: flex;
+    height: available;
+    flex-wrap: wrap;
+}
 
 
+/*
+Als het scherm kleiner wordt, willen we dat de blokken op de volgende regel wrappen
+zodra ze niet meer passen:
 
+![Opdracht 2.5](./assets/five-small.png "Eindresultaat")
+*/
+article {
+    flex-basis: 380px;
+    flex-shrink: 0;
+    flex-grow: 2;
+
+    /*padding is 20 px fyi*/
+    /*werken je properties niet mee, kijk dan even naar height van container*/
 }
